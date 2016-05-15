@@ -22,6 +22,8 @@ RUN cd ${dir}
 RUN wget https://github.com/xebia/VisualReview/releases/download/0.1.3/visualreview-0.1.3.zip
 RUN unzip visualreview-0.1.3.zip
 RUN rm visualreview-0.1.3.zip
+RUN mkdir db
+COPY config.edn ${dir}
 
 EXPOSE 7000
 
